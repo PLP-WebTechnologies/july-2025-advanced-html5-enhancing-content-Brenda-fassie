@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        header, section, footer {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img, video, audio {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        form {
+            display: grid;
+            grid-gap: 15px;
+        }
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        legend {
+            font-weight: bold;
+            color: #555;
+            padding: 0 10px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="url"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+        input:invalid, select:invalid {
+            border: 2px solid #ff0000;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group.radio-buttons {
+            flex-direction: row;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Web Development Showcase</h1>
+        <p>A demonstration of HTML5 content and form capabilities.</p>
+    </header>
+
+    <main>
+        <section id="lists">
+            <h2>Our Services</h2>
+            <p>We offer a range of development services to meet your needs:</p>
+            <h3>Ordered List</h3>
+            <ol>
+                <li>Front-End Development (HTML, CSS, JavaScript)</li>
+                <li>Back-End Development (Node.js, Python, Ruby)</li>
+                <li>Database Management (SQL, NoSQL)</li>
+                <li>Mobile App Development (iOS, Android)</li>
+            </ol>
+            <h3>Unordered List with Nested List</h3>
+            <ul>
+                <li>Web Design
+                    <ul>
+                        <li>UI/UX Prototyping</li>
+                        <li>Responsive Layouts</li>
+                        <li>Branding & Style Guides</li>
+                    </ul>
+                </li>
+                <li>Digital Marketing</li>
+                <li>Cloud Solutions</li>
+            </ul>
+        </section>
+
+        <section id="tables">
+            <h2>Project Milestones</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project Phase</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Discovery & Planning</td>
+                        <td>2024-01-15</td>
+                        <td>2024-02-01</td>
+                        <td>Complete</td>
+                    </tr>
+                    <tr>
+                        <td>Design & Prototyping</td>
+                        <td>2024-02-05</td>
+                        <td>2024-03-10</td>
+                        <td>In Progress</td>
+                    </tr>
+                    <tr>
+                        <td>Development & Testing</td>
+                        <td>2024-03-15</td>
+                        <td>2024-05-30</td>
+                        <td>Scheduled</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="media">
+            <h2>Media Showcase</h2>
+            <p>See some of our recent work and a short introduction video.</p>
+            <h3>Project Image</h3>
+            <figure>
+                <img src="https://via.placeholder.com/600x300.png?text=Creative+Web+Design" alt="A screenshot of a modern, responsive web design project.">
+                <figcaption>A placeholder image for a responsive web design project.</figcaption>
+            </figure>
+            <h3>Introduction Video</h3>
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Audio Clip</h3>
+            <audio controls>
+                <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section id="forms">
+            <h2>Contact Us: Enhanced Form</h2>
+            <p>Please fill out this form to get in touch. All fields with an asterisk (*) are required.</p>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" name="full-name" required placeholder="John Doe" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john.doe@example.com" autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="e.g., 123-456-7890" autocomplete="tel">
+                        <small>Format: 123-456-7890</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthdate">Birth Date</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Project Details</legend>
+                    <div class="form-group">
+                        <label for="project-type">Type of Project *</label>
+                        <select id="project-type" name="project-type" required>
+                            <option value="" disabled selected>-- Select a project type --</option>
+                            <option value="web-design">Web Design</option>
+                            <option value="app-dev">Mobile App Development</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget (USD)</label>
+                        <input type="number" id="budget" name="budget" min="500" step="100" placeholder="Minimum $500">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-description">Project Description *</label>
+                        <textarea id="project-description" name="project-description" rows="5" minlength="20" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="website-url">Your Website (if any)</label>
+                        <input type="url" id="website-url" name="website-url" placeholder="https://www.example.com">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Subscription & Permissions</legend>
+                    <div class="form-group radio-buttons">
+                        <label>Receive Newsletter?</label>
+                        <div>
+                            <input type="radio" id="newsletter-yes" name="newsletter" value="yes">
+                            <label for="newsletter-yes">Yes</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="newsletter-no" name="newsletter" value="no" checked>
+                            <label for="newsletter-no">No</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
